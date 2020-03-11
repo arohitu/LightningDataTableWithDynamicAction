@@ -1,25 +1,12 @@
 ({
     init: function (cmp, event, helper) {
         var rowActions = helper.getRowActions.bind(this, cmp);
-        /*var actions = [
-            { label: 'Show details', name: 'show_details' },
-            { label: 'Delete', name: 'delete' }
-        ], 
-        fetchData = {
-            name : 'company.bsBuzz',
-            author: 'name.findName',
-            published : 'address.state'
-        };
-		*/
-
         cmp.set('v.columns', [
             { label: 'Name', fieldName: 'name', type: 'text' },
             { label: 'Author', fieldName: 'author', type: 'text' },
             { label: 'Publishing State', fieldName: 'published', type: 'text' },
             { label: 'Action', type: 'action', typeAttributes: { rowActions: rowActions } }
         ]);
-        
-        
         cmp.set('v.data', [
             { "name":"Adventures","author":"Rohit","published":"Printed"},
             { "name":"Travelogue","author":"John","published":"Draft"},
